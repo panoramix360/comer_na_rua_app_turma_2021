@@ -33,4 +33,31 @@ class MapViewController: UIViewController {
 // MARK: - MKMapViewDelegate
 extension MapViewController: MKMapViewDelegate {
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+            return nil
+        }
+        
+        let identifier = "custompin"
+        
+        var annotationView: MKAnnotationView?
+        
+        if let customAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            // se a anotação a ser exibida já foi criada, estamos pegando ela do pool de anotações
+            annotationView = customAnnotationView
+            annotationView?.annotation = annotation
+        } else {
+            // se a anotação com o nosso identifier não existir no pool de anotações iremos criar uma do zero
+            let newAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            newAnnotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            annotationView = newAnnotationView
+        }
+        
+        if let annotationView = annotationView {
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "custom-annotation")
+        }
+        
+        return annotationView
+    }
 }
