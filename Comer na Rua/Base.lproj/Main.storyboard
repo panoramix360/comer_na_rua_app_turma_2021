@@ -439,10 +439,10 @@
             </objects>
             <point key="canvasLocation" x="4404" y="-231"/>
         </scene>
-        <!--Localização-->
+        <!--Location View Controller-->
         <scene sceneID="hdd-C5-DWB">
             <objects>
-                <viewController id="4bJ-i3-Uf2" sceneMemberID="viewController">
+                <viewController id="4bJ-i3-Uf2" customClass="LocationViewController" customModule="Comer_na_Rua" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B67-5b-zg6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,6 +469,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4bJ-i3-Uf2" id="CmU-Q3-TGz"/>
+                                    <outlet property="delegate" destination="4bJ-i3-Uf2" id="WaR-wK-akC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oFL-fU-VbX"/>
@@ -480,7 +484,7 @@
                             <constraint firstItem="wep-y4-gzN" firstAttribute="leading" secondItem="oFL-fU-VbX" secondAttribute="leading" id="hZb-OE-uT2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Localização" id="uPE-IN-gBC">
+                    <navigationItem key="navigationItem" id="uPE-IN-gBC">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3iq-LE-v25">
                             <connections>
                                 <segue destination="djh-dq-5QB" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="mRS-Rk-Fsk"/>
@@ -488,6 +492,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Y3-qj-EDW"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="locationTableView" destination="wep-y4-gzN" id="8At-gP-Ecq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ny-sB-l5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="djh-dq-5QB" userLabel="Exit" sceneMemberID="exit"/>

@@ -19,6 +19,9 @@
 		03FC635126B588930061FD44 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC635026B588930061FD44 /* ExploreItem.swift */; };
 		03FC635326B589960061FD44 /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC635226B589960061FD44 /* ExploreDataManager.swift */; };
 		03FC635526B58B8A0061FD44 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC635426B58B8A0061FD44 /* ExploreCollectionViewCell.swift */; };
+		03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC635A26B598580061FD44 /* LocationViewController.swift */; };
+		03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FC635E26B59ACA0061FD44 /* LocationsData.plist */; };
+		03FC636126B59B940061FD44 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636026B59B940061FD44 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		03FC635026B588930061FD44 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		03FC635226B589960061FD44 /* ExploreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
 		03FC635426B58B8A0061FD44 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		03FC635A26B598580061FD44 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		03FC635E26B59ACA0061FD44 /* LocationsData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LocationsData.plist; sourceTree = "<group>"; };
+		03FC636026B59B940061FD44 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +159,35 @@
 		03FC635626B595830061FD44 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				03FC635926B5982D0061FD44 /* Controllers */,
+				03FC635826B598280061FD44 /* Views */,
+				03FC635726B5981B0061FD44 /* Models */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		03FC635726B5981B0061FD44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03FC635E26B59ACA0061FD44 /* LocationsData.plist */,
+				03FC636026B59B940061FD44 /* LocationDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03FC635826B598280061FD44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03FC635926B5982D0061FD44 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03FC635A26B598580061FD44 /* LocationViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +249,7 @@
 			files = (
 				03FC634F26B588430061FD44 /* ExploreData.plist in Resources */,
 				034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */,
+				03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */,
 				034F031926B35C52004069C7 /* Assets.xcassets in Resources */,
 				034F031726B35C4E004069C7 /* Main.storyboard in Resources */,
 			);
@@ -232,8 +266,10 @@
 				034F032826B36BE2004069C7 /* ExploreViewController.swift in Sources */,
 				034F031426B35C4E004069C7 /* ViewController.swift in Sources */,
 				03FC635126B588930061FD44 /* ExploreItem.swift in Sources */,
+				03FC636126B59B940061FD44 /* LocationDataManager.swift in Sources */,
 				034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */,
 				03FC635326B589960061FD44 /* ExploreDataManager.swift in Sources */,
+				03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */,
 				034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */,
 				034F031226B35C4E004069C7 /* SceneDelegate.swift in Sources */,
 			);
