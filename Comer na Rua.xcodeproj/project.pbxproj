@@ -22,6 +22,9 @@
 		03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC635A26B598580061FD44 /* LocationViewController.swift */; };
 		03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FC635E26B59ACA0061FD44 /* LocationsData.plist */; };
 		03FC636126B59B940061FD44 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636026B59B940061FD44 /* LocationDataManager.swift */; };
+		03FC636526B59F1B0061FD44 /* MapLocationsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FC636426B59F1B0061FD44 /* MapLocationsData.plist */; };
+		03FC636726B59FB10061FD44 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636626B59FB10061FD44 /* RestaurantItem.swift */; };
+		03FC636926B5A3F60061FD44 /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636826B5A3F60061FD44 /* MapDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		03FC635A26B598580061FD44 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		03FC635E26B59ACA0061FD44 /* LocationsData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LocationsData.plist; sourceTree = "<group>"; };
 		03FC636026B59B940061FD44 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		03FC636426B59F1B0061FD44 /* MapLocationsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapLocationsData.plist; sourceTree = "<group>"; };
+		03FC636626B59FB10061FD44 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
+		03FC636826B5A3F60061FD44 /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		034F030E26B35C4E004069C7 /* Comer na Rua */ = {
 			isa = PBXGroup;
 			children = (
+				03FC636226B59EDD0061FD44 /* Map */,
 				03FC635626B595830061FD44 /* Location */,
 				034F032A26B380FE004069C7 /* Restaurant */,
 				034F032326B36B44004069C7 /* Explore */,
@@ -190,6 +197,24 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		03FC636226B59EDD0061FD44 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				03FC636326B59EE50061FD44 /* Models */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		03FC636326B59EE50061FD44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03FC636426B59F1B0061FD44 /* MapLocationsData.plist */,
+				03FC636626B59FB10061FD44 /* RestaurantItem.swift */,
+				03FC636826B5A3F60061FD44 /* MapDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +276,7 @@
 				034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */,
 				03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */,
 				034F031926B35C52004069C7 /* Assets.xcassets in Resources */,
+				03FC636526B59F1B0061FD44 /* MapLocationsData.plist in Resources */,
 				034F031726B35C4E004069C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +293,12 @@
 				034F031426B35C4E004069C7 /* ViewController.swift in Sources */,
 				03FC635126B588930061FD44 /* ExploreItem.swift in Sources */,
 				03FC636126B59B940061FD44 /* LocationDataManager.swift in Sources */,
+				03FC636726B59FB10061FD44 /* RestaurantItem.swift in Sources */,
 				034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */,
 				03FC635326B589960061FD44 /* ExploreDataManager.swift in Sources */,
 				03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */,
 				034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */,
+				03FC636926B5A3F60061FD44 /* MapDataManager.swift in Sources */,
 				034F031226B35C4E004069C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

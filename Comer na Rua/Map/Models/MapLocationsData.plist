@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>endereco</key>
+		<string>Rua Francisco Otaviano, 67 - Copacabana</string>
+		<key>area</key>
+		<string>Rio de Janeiro</string>
+		<key>cidade</key>
+		<string>Rio de Janeiro</string>
+		<key>cozinhas</key>
+		<array>
+			<string>Hamburgueria</string>
+		</array>
+		<key>pais</key>
+		<string>BR</string>
+		<key>id</key>
+		<real>102173</real>
+		<key>image_url</key>
+		<string>http://images.guiadohamburguer.com/fotos/430-tt-burger-por-lele-gianetti/reserva-tt-burger-11.jpg</string>
+		<key>lat</key>
+		<real>-22.9871381</real>
+		<key>long</key>
+		<real>-43.1931835</real>
+		<key>mobile_reserve_url</key>
+		<string>http://mobile.opentable.com/opentable/?restId=104173</string>
+		<key>nome</key>
+		<string>T.T. Burger</string>
+		<key>telefone</key>
+		<string>21964588674</string>
+		<key>cep</key>
+		<string>22080-040</string>
+		<key>preco</key>
+		<integer>2</integer>
+		<key>reserve_url</key>
+		<string>http://www.opentable.com/single.aspx?rid=104173</string>
+		<key>estado</key>
+		<string>RJ</string>
+	</dict>
+	<dict>
+		<key>endereco</key>
+		<string>Rua Jardim Botânico, 421 - Jardim Botânico</string>
+		<key>area</key>
+		<string>Rio de Janeiro</string>
+		<key>cidade</key>
+		<string>Rio de Janeiro</string>
+		<key>cozinhas</key>
+		<array>
+			<string>Italiana</string>
+			<string>Bistrô</string>
+		</array>
+		<key>pais</key>
+		<string>BR</string>
+		<key>id</key>
+		<real>101173</real>
+		<key>image_url</key>
+		<string>https://www.shb.com.br/wp-content/uploads/2013/06/bistro021.jpg</string>
+		<key>lat</key>
+		<real>-22.962705</real>
+		<key>long</key>
+		<real>-43.2168407</real>
+		<key>mobile_reserve_url</key>
+		<string>http://mobile.opentable.com/opentable/?restId=104173</string>
+		<key>nome</key>
+		<string>Bistrô da Hípica</string>
+		<key>telefone</key>
+		<string>2121560155</string>
+		<key>cep</key>
+		<string>22470-050</string>
+		<key>preco</key>
+		<integer>2</integer>
+		<key>reserve_url</key>
+		<string>http://www.opentable.com/single.aspx?rid=104173</string>
+		<key>estado</key>
+		<string>RJ</string>
+	</dict>
+	<dict>
+		<key>endereco</key>
+		<string>Rua Maria Angélica, 129 - Lagoa</string>
+		<key>area</key>
+		<string>Rio de Janeiro</string>
+		<key>cidade</key>
+		<string>Rio de Janeiro</string>
+		<key>cozinhas</key>
+		<array>
+			<string>Pizzaria</string>
+		</array>
+		<key>pais</key>
+		<string>BR</string>
+		<key>id</key>
+		<real>100173</real>
+		<key>image_url</key>
+		<string>http://ficavaiterjanta.tempsite.ws/wp-content/uploads/2018/06/06062018Braz0485-237.jpg</string>
+		<key>lat</key>
+		<real>-22.9618038</real>
+		<key>long</key>
+		<real>-43.2101487</real>
+		<key>mobile_reserve_url</key>
+		<string>http://mobile.opentable.com/opentable/?restId=104173</string>
+		<key>nome</key>
+		<string>Bráz Pizzaria</string>
+		<key>telefone</key>
+		<string>2125350687</string>
+		<key>cep</key>
+		<string>22470-202</string>
+		<key>preco</key>
+		<integer>2</integer>
+		<key>reserve_url</key>
+		<string>http://www.opentable.com/single.aspx?rid=104173</string>
+		<key>estado</key>
+		<string>RJ</string>
+	</dict>
+	<dict>
+		<key>endereco</key>
+		<string>Rua José Joaquim Seabra, 19 - Lagoa</string>
+		<key>area</key>
+		<string>Rio de Janeiro</string>
+		<key>cidade</key>
+		<string>Rio de Janeiro</string>
+		<key>cozinhas</key>
+		<array>
+			<string>Indiana</string>
+			<string>Gastropubs</string>
+		</array>
+		<key>pais</key>
+		<string>BR</string>
+		<key>id</key>
+		<real>104173</real>
+		<key>image_url</key>
+		<string>https://media-cdn.tripadvisor.com/media/photo-s/0f/12/1c/b8/romantic-table-for-two.jpg</string>
+		<key>lat</key>
+		<real>-22.963822</real>
+		<key>long</key>
+		<real>-43.2185269</real>
+		<key>mobile_reserve_url</key>
+		<string>http://mobile.opentable.com/opentable/?restId=104173</string>
+		<key>nome</key>
+		<string>Taj Mahal</string>
+		<key>telefone</key>
+		<string>2141064034</string>
+		<key>cep</key>
+		<string>22470-130</string>
+		<key>preco</key>
+		<integer>2</integer>
+		<key>reserve_url</key>
+		<string>http://www.opentable.com/single.aspx?rid=104173</string>
+		<key>estado</key>
+		<string>RJ</string>
+	</dict>
+</array>
+</plist>
