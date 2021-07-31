@@ -25,6 +25,7 @@
 		03FC636526B59F1B0061FD44 /* MapLocationsData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03FC636426B59F1B0061FD44 /* MapLocationsData.plist */; };
 		03FC636726B59FB10061FD44 /* RestaurantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636626B59FB10061FD44 /* RestaurantItem.swift */; };
 		03FC636926B5A3F60061FD44 /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636826B5A3F60061FD44 /* MapDataManager.swift */; };
+		03FC636C26B5A5B50061FD44 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636B26B5A5B50061FD44 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		03FC636426B59F1B0061FD44 /* MapLocationsData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapLocationsData.plist; sourceTree = "<group>"; };
 		03FC636626B59FB10061FD44 /* RestaurantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItem.swift; sourceTree = "<group>"; };
 		03FC636826B5A3F60061FD44 /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
+		03FC636B26B5A5B50061FD44 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		034F030E26B35C4E004069C7 /* Comer na Rua */ = {
 			isa = PBXGroup;
 			children = (
+				03FC636A26B5A5A10061FD44 /* Misc */,
 				03FC636226B59EDD0061FD44 /* Map */,
 				03FC635626B595830061FD44 /* Location */,
 				034F032A26B380FE004069C7 /* Restaurant */,
@@ -215,6 +218,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		03FC636A26B5A5A10061FD44 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				03FC636B26B5A5B50061FD44 /* DataManager.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +310,7 @@
 				03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */,
 				034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */,
 				03FC636926B5A3F60061FD44 /* MapDataManager.swift in Sources */,
+				03FC636C26B5A5B50061FD44 /* DataManager.swift in Sources */,
 				034F031226B35C4E004069C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
