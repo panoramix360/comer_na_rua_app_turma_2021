@@ -11,8 +11,11 @@ class ExploreViewController: UIViewController {
 
     @IBOutlet var categoriesCollectionView: UICollectionView!
     
+    let manager = ExploreDataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager.fetch()
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {
@@ -22,11 +25,18 @@ class ExploreViewController: UIViewController {
 // MARK: - UICollectionViewDataSource
 extension ExploreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        return manager.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(withReuseIdentifier: "exploreCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exploreCell", for: indexPath) as! ExploreCollectionViewCell
+        
+        let item = manager.explore(at: indexPath)
+        
+        cell.nameLabel.text = item.name
+        cell.exploreImageView.image = UIImage(named: item.image)
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
