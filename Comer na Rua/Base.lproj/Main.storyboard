@@ -10,16 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="1KK-Vr-DWe">
             <objects>
-                <viewController id="ej3-sd-Qdq" sceneMemberID="viewController">
+                <viewController id="ej3-sd-Qdq" customClass="MapViewController" customModule="Comer_na_Rua" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64b-d7-GX5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Yy-hV-u8N">
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ej3-sd-Qdq" id="rrE-KG-vRi"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cSd-K8-Xwy"/>
@@ -32,6 +35,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2kK-Ie-VB7"/>
+                    <connections>
+                        <outlet property="mapView" destination="1Yy-hV-u8N" id="YwG-05-JNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8g-yk-JDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
