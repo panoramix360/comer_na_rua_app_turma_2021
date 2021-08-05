@@ -13,11 +13,21 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     
     let manager = MapDataManager()
+    var selectedRestaurant: RestaurantItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialize()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case Segue.showDetail.rawValue:
+            showRestaurantDetail(segue: segue)
+        default:
+            print("Segue não encontrado")
+        }
     }
     
     func initialize() {
@@ -27,6 +37,13 @@ class MapViewController: UIViewController {
     func addMapAnnotations(_ annotations: [RestaurantItem]) {
         mapView.setRegion(manager.currentRegion(latDelta: 0.5, longDelta: 0.5), animated: true)
         mapView.addAnnotations(annotations)
+    }
+    
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantDetailTableViewController,
+           let restaurant = selectedRestaurant {
+            viewController.selectedRestaurant = restaurant
+        }
     }
 }
 
@@ -59,5 +76,14 @@ extension MapViewController: MKMapViewDelegate {
         }
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotation = mapView.selectedAnnotations.first else {
+            return
+        }
+        
+        selectedRestaurant = annotation as? RestaurantItem
+        self.performSegue(withIdentifier: Segue.showDetail.rawValue, sender: self)
     }
 }

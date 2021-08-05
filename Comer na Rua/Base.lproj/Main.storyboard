@@ -37,6 +37,7 @@
                     <navigationItem key="navigationItem" id="2kK-Ie-VB7"/>
                     <connections>
                         <outlet property="mapView" destination="1Yy-hV-u8N" id="YwG-05-JNh"/>
+                        <segue destination="52a-NA-IdF" kind="show" identifier="showDetail" id="vr5-9e-NlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8g-yk-JDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -366,7 +367,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aK-N1-cV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736" y="288"/>
+            <point key="canvasLocation" x="3235" y="271"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="hdd-C5-DWB">
@@ -505,6 +506,9 @@
             <point key="canvasLocation" x="2738" y="-1061"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vr5-9e-NlL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="american" width="88.5" height="64.5"/>
         <image name="btn-location" width="96" height="25"/>
