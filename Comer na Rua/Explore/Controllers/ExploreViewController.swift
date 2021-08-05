@@ -15,11 +15,17 @@ class ExploreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+    }
+}
+
+// MARK: - Private Extension
+private extension ExploreViewController {
+    func initialize() {
         manager.fetch()
     }
     
-    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {
-    }
+    @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
 }
 
 // MARK: - UICollectionViewDataSource

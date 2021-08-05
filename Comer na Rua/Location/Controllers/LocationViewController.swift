@@ -15,6 +15,13 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+    }
+}
+
+// MARK: - Private extension
+private extension LocationViewController {
+    func initialize() {
         manager.fetch()
     }
 }
