@@ -23,6 +23,7 @@ class ExploreViewController: UIViewController {
 private extension ExploreViewController {
     func initialize() {
         manager.fetch()
+        APIManager.restaurantsURL
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
