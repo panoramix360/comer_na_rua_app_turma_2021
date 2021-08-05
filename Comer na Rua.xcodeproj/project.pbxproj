@@ -27,6 +27,7 @@
 		03FC636926B5A3F60061FD44 /* MapDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636826B5A3F60061FD44 /* MapDataManager.swift */; };
 		03FC636C26B5A5B50061FD44 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636B26B5A5B50061FD44 /* DataManager.swift */; };
 		03FC636F26B5A73F0061FD44 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC636E26B5A73F0061FD44 /* MapViewController.swift */; };
+		03FC637126B5AFFF0061FD44 /* RestaurantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FC637026B5AFFF0061FD44 /* RestaurantDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		03FC636826B5A3F60061FD44 /* MapDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataManager.swift; sourceTree = "<group>"; };
 		03FC636B26B5A5B50061FD44 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		03FC636E26B5A73F0061FD44 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		03FC637026B5AFFF0061FD44 /* RestaurantDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		034F032C26B38109004069C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03FC637026B5AFFF0061FD44 /* RestaurantDetail.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */,
 				03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */,
 				034F031926B35C52004069C7 /* Assets.xcassets in Resources */,
+				03FC637126B5AFFF0061FD44 /* RestaurantDetail.storyboard in Resources */,
 				03FC636526B59F1B0061FD44 /* MapLocationsData.plist in Resources */,
 				034F031726B35C4E004069C7 /* Main.storyboard in Resources */,
 			);
