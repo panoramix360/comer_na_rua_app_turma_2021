@@ -17,7 +17,6 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initialize()
     }
     
@@ -29,7 +28,10 @@ class MapViewController: UIViewController {
             print("Segue não encontrado")
         }
     }
-    
+}
+
+// MARK: - Private Extension
+private extension MapViewController {
     func initialize() {
         manager.fetch { addMapAnnotations($0) }
     }
