@@ -18,6 +18,16 @@ struct APIManager {
         return apiURL(endpoint: .restaurants)
     }
     
+    static func restaurants(fromJSON data: Data) -> Result<[RestaurantItem], Error> {
+        do {
+            let decoder = JSONDecoder()
+            let restaurantsResponse = try decoder.decode([RestaurantItem].self, from: data)
+            return .success(restaurantsResponse)
+        } catch {
+            return .failure(error)
+        }
+    }
+    
     private static func apiURL(endpoint: Endpoint, parameters: [String:String]? = nil) -> URL {
         var components = URLComponents(string: baseURL)!
         components.path = endpoint.rawValue

@@ -15,14 +15,18 @@ class MapDataManager: DataManager {
         return items
     }
     
-    func fetch(completion: (_ annotations: [RestaurantItem]) -> ()) {
-        if items.count > 0 { items.removeAll() }
-        
-        for data in load(file: "MapLocationsData") {
-            items.append(RestaurantItem(dict: data))
+    func fetch(completion: @escaping (_ annotations: [RestaurantItem]) -> ()) {
+        RestaurantAPIManager.shared.fetchRestaurants {
+            (restaurautsResult) in
+            
+            switch restaurautsResult {
+            case let .success(restaurants):
+                self.items = restaurants
+                completion(restaurants)
+            case let .failure(error):
+                print("Erro ao buscar restaurantes: \(error)")
+            }
         }
-        
-        completion(items)
     }
     
     func currentRegion(latDelta: CLLocationDegrees, longDelta: CLLocationDegrees) -> MKCoordinateRegion {
