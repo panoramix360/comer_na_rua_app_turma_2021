@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class RestaurantItem: NSObject, MKAnnotation {
+class RestaurantItem: NSObject, MKAnnotation, Codable {
     var name: String?
     var cuisines: [String] = []
     var lat: Double?
@@ -38,15 +38,15 @@ class RestaurantItem: NSObject, MKAnnotation {
         else { return cuisines.joined(separator: ", ") }
     }
     
-    init(dict: [String:AnyObject]) {
-         if let lat = dict["lat"] as? Double { self.lat = lat }
-         if let long = dict["long"] as? Double { self.long = long }
-         if let name = dict["nome"] as? String { self.name = name }
-         if let cuisines = dict["cozinhas"] as? [String] { self.cuisines = cuisines }
-         if let address = dict["endereco"] as? String { self.address = address }
-         if let postalCode = dict["cep"] as? String { self.postalCode = postalCode }
-         if let state = dict["estado"] as? String { self.state = state }
-         if let image = dict["image_url"] as? String { self.imageURL = image }
-         if let id = dict["id"] as? Int { self.restaurantID = id }
-     }
+    enum CodingKeys: String, CodingKey {
+        case name = "nome"
+        case cuisines = "cozinhas"
+        case lat
+        case long
+        case address = "endereco"
+        case postalCode = "cep"
+        case state = "estado"
+        case imageURL = "image_url"
+        case restaurantID = "id"
+    }
 }

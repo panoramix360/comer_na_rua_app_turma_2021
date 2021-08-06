@@ -33,7 +33,10 @@ class MapViewController: UIViewController {
 // MARK: - Private Extension
 private extension MapViewController {
     func initialize() {
-        manager.fetch { addMapAnnotations($0) }
+        manager.fetch {
+            // FIXME: Corrigir essa chamada abaixo, porque está sendo executada em uma Background Thread
+            self.addMapAnnotations($0)
+        }
     }
     
     func addMapAnnotations(_ annotations: [RestaurantItem]) {
