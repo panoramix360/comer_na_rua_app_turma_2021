@@ -10,8 +10,10 @@ import UIKit
 class ExploreViewController: UIViewController {
 
     @IBOutlet var categoriesCollectionView: UICollectionView!
+    var headerView: ExploreHeaderView!
     
     let manager = ExploreDataManager()
+    var selectedLocation: LocationItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,16 @@ private extension ExploreViewController {
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
+    
+    @IBAction func unwindLocationDone(segue: UIStoryboardSegue) {
+        if let viewController = segue.source as? LocationViewController {
+            selectedLocation = viewController.selectedLocation
+            
+            if let location = selectedLocation {
+                headerView.locationLabel.text = location.full
+            }
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -46,6 +58,10 @@ extension ExploreViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        
+        headerView = header as? ExploreHeaderView
+        
+        return header
     }
 }

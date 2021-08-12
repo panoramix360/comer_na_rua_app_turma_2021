@@ -111,7 +111,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="XUa-O2-qXX">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="XUa-O2-qXX" customClass="ExploreHeaderView" customModule="Comer_na_Rua" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -177,6 +177,9 @@
                                         <constraint firstItem="dU9-Pq-Qfy" firstAttribute="leading" secondItem="XUa-O2-qXX" secondAttribute="leading" id="dv8-us-p0R"/>
                                         <constraint firstItem="dU9-Pq-Qfy" firstAttribute="top" secondItem="XUa-O2-qXX" secondAttribute="top" id="mN1-Cz-gqF"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="locationLabel" destination="Cqn-tU-jQJ" id="WFF-sA-3Kn"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="aS4-MB-FR1" id="MCF-6f-z5b"/>
@@ -420,7 +423,11 @@
                                 <segue destination="djh-dq-5QB" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="mRS-Rk-Fsk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Y3-qj-EDW"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Y3-qj-EDW">
+                            <connections>
+                                <segue destination="djh-dq-5QB" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="PZq-a7-Fiu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="locationTableView" destination="wep-y4-gzN" id="8At-gP-Ecq"/>
