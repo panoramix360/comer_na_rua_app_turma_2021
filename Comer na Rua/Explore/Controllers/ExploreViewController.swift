@@ -24,6 +24,8 @@ class ExploreViewController: UIViewController {
         switch segue.identifier! {
         case Segue.locationList.rawValue:
             showLocationList(segue: segue)
+        case Segue.restaurantList.rawValue:
+            showRestaurantList(segue: segue)
         default:
             print("Segue não encontrado")
         }
@@ -44,6 +46,17 @@ private extension ExploreViewController {
         guard let location = selectedLocation else { return }
         
         viewController.selectedLocation = location
+    }
+    
+    func showRestaurantList(segue: UIStoryboardSegue) {
+        guard let viewController = segue.destination as? RestaurantListViewController,
+              let location = selectedLocation,
+              let index = categoriesCollectionView.indexPathsForSelectedItems?.first else {
+            return
+        }
+        
+        viewController.selectedLocation = location
+        viewController.selectedCuisine = manager.explore(at: index).name
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
