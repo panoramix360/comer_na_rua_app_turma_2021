@@ -12,6 +12,7 @@ class LocationViewController: UIViewController {
     @IBOutlet var locationTableView: UITableView!
     
     let manager = LocationDataManager()
+    var selectedLocation: LocationItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +39,16 @@ extension LocationViewController: UITableViewDataSource {
         cell.textLabel?.text = manager.locationItem(at: indexPath).full
         
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension LocationViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+            selectedLocation = manager.locationItem(at: indexPath)
+            tableView.reloadData()
+        }
     }
 }
