@@ -25,6 +25,19 @@ private extension LocationViewController {
     func initialize() {
         manager.fetch()
     }
+    
+    func set(selected cell: UITableViewCell, at indexPath: IndexPath) {
+        if let city = selectedLocation?.city {
+            let data = manager.findLocation(by: city)
+            if data.isFound && indexPath.row == data.position {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+        } else {
+            cell.accessoryType = .none
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -37,6 +50,7 @@ extension LocationViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
         
         cell.textLabel?.text = manager.locationItem(at: indexPath).full
+        set(selected: cell, at: indexPath)
         
         return cell
     }
