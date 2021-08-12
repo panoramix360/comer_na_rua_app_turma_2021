@@ -19,12 +19,31 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case Segue.locationList.rawValue:
+            showLocationList(segue: segue)
+        default:
+            print("Segue não encontrado")
+        }
+    }
 }
 
 // MARK: - Private Extension
 private extension ExploreViewController {
     func initialize() {
         manager.fetch()
+    }
+    
+    func showLocationList(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController,
+              let viewController = navController.topViewController as? LocationViewController else {
+            return
+        }
+        guard let location = selectedLocation else { return }
+        
+        viewController.selectedLocation = location
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}

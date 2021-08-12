@@ -107,7 +107,7 @@
                                         <connections>
                                             <outlet property="exploreImageView" destination="2Kk-dL-546" id="8Ju-m6-B0P"/>
                                             <outlet property="nameLabel" destination="Kbl-bm-3qM" id="qVy-o4-nlN"/>
-                                            <segue destination="SGp-wz-vS8" kind="show" id="try-XS-VVQ"/>
+                                            <segue destination="SGp-wz-vS8" kind="show" identifier="restaurantList" id="try-XS-VVQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -126,7 +126,7 @@
                                                     </constraints>
                                                     <state key="normal" image="btn-location"/>
                                                     <connections>
-                                                        <segue destination="pr1-Vi-DpS" kind="presentation" id="3J2-Xg-uTd"/>
+                                                        <segue destination="pr1-Vi-DpS" kind="presentation" identifier="locationList" id="3J2-Xg-uTd"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECIONE A LOCALIZAÇÃO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqn-tU-jQJ">
@@ -514,7 +514,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vr5-9e-NlL"/>
+        <segue reference="7vP-wo-iOy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="american" width="88.5" height="64.5"/>
