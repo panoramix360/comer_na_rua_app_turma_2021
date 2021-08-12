@@ -20,6 +20,16 @@ class ExploreViewController: UIViewController {
         initialize()
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == Segue.restaurantList.rawValue {
+            guard selectedLocation != nil else {
+                showAlert()
+                return false
+            }
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case Segue.locationList.rawValue:
@@ -57,6 +67,13 @@ private extension ExploreViewController {
         
         viewController.selectedLocation = location
         viewController.selectedCuisine = manager.explore(at: index).name
+    }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Localização necessária", message: "Por favor, selecione uma localização.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
