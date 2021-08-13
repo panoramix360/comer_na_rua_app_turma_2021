@@ -14,8 +14,8 @@ enum Endpoint: String {
 struct APIManager {
     private static let baseURL: String = "http://my-json-server.typicode.com"
     
-    static var restaurantsURL: URL {
-        return apiURL(endpoint: .restaurants)
+    static func restaurantsURL(with filter: [String:String]?) -> URL {
+        return apiURL(endpoint: .restaurants, parameters: filter)
     }
     
     static func restaurants(fromJSON data: Data) -> Result<[RestaurantItem], Error> {

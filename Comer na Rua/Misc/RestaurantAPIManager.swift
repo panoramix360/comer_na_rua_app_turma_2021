@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum RestaurantAPIFilterKeys: String {
+    case city = "cidade"
+    case state = "estado"
+}
+
 class RestaurantAPIManager {
     static let shared: RestaurantAPIManager = {
         let instance = RestaurantAPIManager()
@@ -20,8 +25,8 @@ class RestaurantAPIManager {
         return URLSession(configuration: config)
     }()
     
-    func fetchRestaurants(completion: @escaping (Result<[RestaurantItem], Error>) -> Void) {
-        let url = APIManager.restaurantsURL
+    func fetchRestaurants(by filter: RestaurantFilter, completion: @escaping (Result<[RestaurantItem], Error>) -> Void) {
+        let url = APIManager.restaurantsURL(with: filterToDict(filter))
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) {
@@ -40,5 +45,12 @@ class RestaurantAPIManager {
         }
         
         return APIManager.restaurants(fromJSON: jsonData)
+    }
+    
+    private func filterToDict(_ filter: RestaurantFilter) -> [String:String] {
+        return [
+            RestaurantAPIFilterKeys.city.rawValue: filter.city,
+            RestaurantAPIFilterKeys.state.rawValue: filter.state
+        ]
     }
 }

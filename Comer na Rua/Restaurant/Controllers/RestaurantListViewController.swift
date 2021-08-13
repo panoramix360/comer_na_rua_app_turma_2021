@@ -25,8 +25,24 @@ class RestaurantListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        print("cidade selecionada \(selectedLocation as Any)")
-        print("cozinha selecionada \(selectedCuisine as Any)")
+        guard let city = selectedLocation?.city,
+              let state = selectedLocation?.state,
+              let cuisine = selectedCuisine else {
+            return
+        }
+        
+        let manager = RestaurantDataManager()
+        manager.fetch(by: RestaurantFilter(city: city, state: state, cuisine: cuisine)) {
+            items in
+            
+            if manager.numberOfItems() > 0 {
+                for item in items {
+                    print(item.name)
+                }
+            } else {
+                print("Nenhum restaurante encontrado")
+            }
+        }
     }
 }
 

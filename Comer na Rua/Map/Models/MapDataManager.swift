@@ -16,16 +16,12 @@ class MapDataManager: DataManager {
     }
     
     func fetch(completion: @escaping (_ annotations: [RestaurantItem]) -> ()) {
-        RestaurantAPIManager.shared.fetchRestaurants {
-            (restaurautsResult) in
+        let manager = RestaurantDataManager()
+        manager.fetch(by: RestaurantFilter(city: "Rio de Janeiro", state: "RJ")) {
+            items in
             
-            switch restaurautsResult {
-            case let .success(restaurants):
-                self.items = restaurants
-                completion(restaurants)
-            case let .failure(error):
-                print("Erro ao buscar restaurantes: \(error)")
-            }
+            self.items = items
+            completion(items)
         }
     }
     
