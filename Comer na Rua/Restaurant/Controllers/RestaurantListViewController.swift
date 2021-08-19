@@ -72,13 +72,10 @@ extension RestaurantListViewController: UICollectionViewDataSource {
         if let name = item.name { cell.titleLabel.text = name }
         if let cuisine = item.subtitle { cell.cuisineLabel.text = cuisine }
         
-        if let image = item.imageURL,
-           let url = URL(string: image) {
-            let data = try? Data(contentsOf: url)
-            if let imageData = data {
-                cell.restaurantImage.image = UIImage(data: imageData)
-            }
+        manager.fetchImage(at: indexPath) {
+            (image) in
             
+            cell.restaurantImage.image = image
         }
         
         return cell

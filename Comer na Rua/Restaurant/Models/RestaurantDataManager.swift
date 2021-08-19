@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RestaurantDataManager {
     fileprivate var items: [RestaurantItem] = []
@@ -28,6 +29,21 @@ class RestaurantDataManager {
             
             DispatchQueue.main.async {
                 completion(self.items)
+            }
+        }
+    }
+    
+    func fetchImage(at index: IndexPath, completion: @escaping (_ image: UIImage) -> Void) {
+        RestaurantAPIManager.shared.fetchRestaurantImage(for: items[index.item]) {
+            (imageResult) in
+            
+            switch imageResult {
+            case let .success(image):
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+            case let .failure(error):
+                print("Não foi possível baixar a imagem: \(error)")
             }
         }
     }
