@@ -26,7 +26,9 @@ class RestaurantDataManager {
                 print("Erro ao buscar restaurantes: \(error)")
             }
             
-            completion(self.items)
+            DispatchQueue.main.async {
+                completion(self.items)
+            }
         }
     }
     
