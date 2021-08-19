@@ -205,7 +205,7 @@
             </objects>
             <point key="canvasLocation" x="1847.2" y="-490.70464767616198"/>
         </scene>
-        <!--Lista de Restaurantes-->
+        <!--Restaurant List View Controller-->
         <scene sceneID="9bO-AF-dq1">
             <objects>
                 <viewController id="SGp-wz-vS8" customClass="RestaurantListViewController" customModule="Comer_na_Rua" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,7 +356,7 @@
                             <constraint firstItem="Yk5-hz-wms" firstAttribute="trailing" secondItem="kRj-Pu-Wus" secondAttribute="trailing" id="zaQ-6M-XuQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lista de Restaurantes" id="cb9-W2-cFt"/>
+                    <navigationItem key="navigationItem" id="cb9-W2-cFt"/>
                     <connections>
                         <outlet property="restaurantListCollectionView" destination="kRj-Pu-Wus" id="Z51-5h-b48"/>
                     </connections>

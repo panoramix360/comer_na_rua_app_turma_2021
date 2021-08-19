@@ -19,8 +19,7 @@ class RestaurantListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTitle()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,6 +54,21 @@ private extension RestaurantListViewController {
             
             self.restaurantListCollectionView.reloadData()
         }
+    }
+    
+    func setupTitle() {
+        guard let navigationController = navigationController else {
+            return
+        }
+        
+        navigationController.setNavigationBarHidden(false, animated: false)
+        
+        if let city = selectedLocation?.city,
+           let state = selectedLocation?.state {
+            title = "\(city.uppercased()), \(state.uppercased())"
+        }
+        
+        navigationController.navigationBar.prefersLargeTitles = true
     }
 }
 
