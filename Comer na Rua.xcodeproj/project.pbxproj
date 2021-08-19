@@ -16,6 +16,10 @@
 		034F032826B36BE2004069C7 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F032726B36BE2004069C7 /* ExploreViewController.swift */; };
 		034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F032E26B3813D004069C7 /* RestaurantListViewController.swift */; };
 		03EA658D26C5D0DA0008EA43 /* ExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA658C26C5D0DA0008EA43 /* ExploreHeaderView.swift */; };
+		03EA658F26C5ECA40008EA43 /* RestaurantFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA658E26C5ECA40008EA43 /* RestaurantFilter.swift */; };
+		03EA659126C5F3840008EA43 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA659026C5F3840008EA43 /* RestaurantCell.swift */; };
+		03EA659526C5F5210008EA43 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA659426C5F5210008EA43 /* NoDataView.swift */; };
+		03EA659726C5F54E0008EA43 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03EA659626C5F54E0008EA43 /* NoDataView.xib */; };
 		03FA5BFF26BC9382003135A5 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA5BFE26BC9382003135A5 /* Segue.swift */; };
 		03FA5C0126BC96EF003135A5 /* RestaurantDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA5C0026BC96EF003135A5 /* RestaurantDetailTableViewController.swift */; };
 		03FA5C0326BCA0B0003135A5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA5C0226BCA0B0003135A5 /* APIManager.swift */; };
@@ -49,6 +53,10 @@
 		034F032726B36BE2004069C7 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		034F032E26B3813D004069C7 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
 		03EA658C26C5D0DA0008EA43 /* ExploreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeaderView.swift; sourceTree = "<group>"; };
+		03EA658E26C5ECA40008EA43 /* RestaurantFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFilter.swift; sourceTree = "<group>"; };
+		03EA659026C5F3840008EA43 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		03EA659426C5F5210008EA43 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		03EA659626C5F54E0008EA43 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		03FA5BFE26BC9382003135A5 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		03FA5C0026BC96EF003135A5 /* RestaurantDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewController.swift; sourceTree = "<group>"; };
 		03FA5C0226BCA0B0003135A5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				03FA5C0626BCC051003135A5 /* RestaurantDataManager.swift */,
+				03EA658E26C5ECA40008EA43 /* RestaurantFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				03FC637026B5AFFF0061FD44 /* RestaurantDetail.storyboard */,
+				03EA659026C5F3840008EA43 /* RestaurantCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +196,23 @@
 				03FA5C0026BC96EF003135A5 /* RestaurantDetailTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03EA659226C5F4EE0008EA43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03EA659326C5F4F60008EA43 /* NoData */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03EA659326C5F4F60008EA43 /* NoData */ = {
+			isa = PBXGroup;
+			children = (
+				03EA659426C5F5210008EA43 /* NoDataView.swift */,
+				03EA659626C5F54E0008EA43 /* NoDataView.xib */,
+			);
+			path = NoData;
 			sourceTree = "<group>";
 		};
 		03FC635626B595830061FD44 /* Location */ = {
@@ -245,6 +272,7 @@
 		03FC636A26B5A5A10061FD44 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				03EA659226C5F4EE0008EA43 /* Views */,
 				03FC636B26B5A5B50061FD44 /* DataManager.swift */,
 				03FA5BFE26BC9382003135A5 /* Segue.swift */,
 				03FA5C0226BCA0B0003135A5 /* APIManager.swift */,
@@ -319,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03FC634F26B588430061FD44 /* ExploreData.plist in Resources */,
+				03EA659726C5F54E0008EA43 /* NoDataView.xib in Resources */,
 				034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */,
 				03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */,
 				034F031926B35C52004069C7 /* Assets.xcassets in Resources */,
@@ -339,13 +368,16 @@
 				03FA5C0926BCC693003135A5 /* LocationItem.swift in Sources */,
 				034F032826B36BE2004069C7 /* ExploreViewController.swift in Sources */,
 				034F031426B35C4E004069C7 /* ViewController.swift in Sources */,
+				03EA658F26C5ECA40008EA43 /* RestaurantFilter.swift in Sources */,
 				03FC635126B588930061FD44 /* ExploreItem.swift in Sources */,
 				03FC636126B59B940061FD44 /* LocationDataManager.swift in Sources */,
 				03FA5C0526BCB225003135A5 /* RestaurantAPIManager.swift in Sources */,
 				03FC636726B59FB10061FD44 /* RestaurantItem.swift in Sources */,
 				034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */,
 				03FA5C0126BC96EF003135A5 /* RestaurantDetailTableViewController.swift in Sources */,
+				03EA659126C5F3840008EA43 /* RestaurantCell.swift in Sources */,
 				03FC635326B589960061FD44 /* ExploreDataManager.swift in Sources */,
+				03EA659526C5F5210008EA43 /* NoDataView.swift in Sources */,
 				03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */,
 				034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */,
 				03EA658D26C5D0DA0008EA43 /* ExploreHeaderView.swift in Sources */,

@@ -6,23 +6,44 @@
 //
 
 import Foundation
+import UIKit
 
 class RestaurantDataManager {
     fileprivate var items: [RestaurantItem] = []
     
-    func fetch(withCuisines filter: String = "Todas") {
-        RestaurantAPIManager.shared.fetchRestaurants {
+    func fetch(by filter: RestaurantFilter, completion: @escaping (_ items: [RestaurantItem]) -> Void) {
+        RestaurantAPIManager.shared.fetchRestaurants(by: filter) {
             (restaurautsResult) in
             
             switch restaurautsResult {
             case let .success(restaurants):
-                if filter != "Todas" {
-                    self.items = restaurants.filter { $0.cuisines.contains(filter) }
+                if let cuisine = filter.cuisine,
+                   cuisine != "Todas" {
+                    self.items = restaurants.filter { $0.cuisines.contains(cuisine) }
                 } else {
                     self.items = restaurants
                 }
             case let .failure(error):
                 print("Erro ao buscar restaurantes: \(error)")
+            }
+            
+            DispatchQueue.main.async {
+                completion(self.items)
+            }
+        }
+    }
+    
+    func fetchImage(at index: IndexPath, completion: @escaping (_ image: UIImage) -> Void) {
+        RestaurantAPIManager.shared.fetchRestaurantImage(for: items[index.item]) {
+            (imageResult) in
+            
+            switch imageResult {
+            case let .success(image):
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+            case let .failure(error):
+                print("Não foi possível baixar a imagem: \(error)")
             }
         }
     }

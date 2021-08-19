@@ -34,7 +34,6 @@ class MapViewController: UIViewController {
 private extension MapViewController {
     func initialize() {
         manager.fetch {
-            // FIXME: Corrigir essa chamada abaixo, porque está sendo executada em uma Background Thread
             self.addMapAnnotations($0)
         }
     }

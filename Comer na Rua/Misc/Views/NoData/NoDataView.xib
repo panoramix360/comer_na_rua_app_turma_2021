@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDataView" customModule="Comer_na_Rua" customModuleProvider="target">
+            <connections>
+                <outlet property="descLabel" destination="xch-mD-qnJ" id="pi3-am-Zrt"/>
+                <outlet property="titleLabel" destination="yzP-Ki-wlj" id="pcR-IZ-Twy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jfp-Ez-Qxk">
+                    <rect key="frame" x="10" y="417.5" width="394" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO VAI AQUI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzP-Ki-wlj">
+                            <rect key="frame" x="93.5" y="0.0" width="207.5" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="IIf-cY-U7y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRICAO VAI AQUI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xch-mD-qnJ">
+                            <rect key="frame" x="118" y="40" width="158.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Wxf-Cg-cHj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jfp-Ez-Qxk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="CUE-yU-JIp"/>
+                <constraint firstItem="jfp-Ez-Qxk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="czz-bh-Kh8"/>
+                <constraint firstItem="jfp-Ez-Qxk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kiU-fQ-Ixg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jfp-Ez-Qxk" secondAttribute="trailing" constant="10" id="lPP-wc-Chl"/>
+            </constraints>
+            <point key="canvasLocation" x="107" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
