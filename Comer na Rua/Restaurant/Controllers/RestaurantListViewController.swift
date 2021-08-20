@@ -26,10 +26,29 @@ class RestaurantListViewController: UIViewController {
         super.viewDidAppear(animated)
         loadRestaurants()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Segue.showDetail.rawValue:
+                showRestaurantDetail(segue: segue)
+            default:
+                print("Segue não encontrado")
+            }
+        }
+    }
 }
 
 // MARK: - Private extension
 private extension RestaurantListViewController {
+    func showRestaurantDetail(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantDetailTableViewController,
+           let index = restaurantListCollectionView.indexPathsForSelectedItems?.first {
+            selectedRestaurant = manager.restaurantItem(at: index)
+            viewController.selectedRestaurant = selectedRestaurant
+        }
+    }
+    
     func loadRestaurants() {
         guard let city = selectedLocation?.city,
               let state = selectedLocation?.state,

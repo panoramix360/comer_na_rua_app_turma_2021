@@ -337,7 +337,7 @@
                                             <outlet property="cuisineLabel" destination="2YC-Oo-mba" id="Moj-Jd-CtN"/>
                                             <outlet property="restaurantImage" destination="yOv-yV-C85" id="Fbk-o9-4Cl"/>
                                             <outlet property="titleLabel" destination="DEw-pF-UGB" id="1J3-lG-z4x"/>
-                                            <segue destination="52a-NA-IdF" kind="show" id="7vP-wo-iOy"/>
+                                            <segue destination="52a-NA-IdF" kind="show" identifier="showDetail" id="7vP-wo-iOy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
