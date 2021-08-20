@@ -185,7 +185,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItQ-4o-iVL">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItQ-4o-iVL" customClass="RatingsView" customModule="Comer_na_Rua" customModuleProvider="target">
                                                     <rect key="frame" x="126" y="48" width="214" height="34"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -221,20 +221,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lTA-EF-TZ5">
-                                                    <rect key="frame" x="16" y="11" width="343" height="48"/>
+                                                    <rect key="frame" x="24" y="11" width="327" height="48"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-IY-4cR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="161" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="153" height="48"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3d-W2-aDb">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="27.5"/>
                                                                     <color key="tintColor" red="1" green="0.1647058824" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <state key="normal" image="camera.fill" catalog="system">
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                                     </state>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Foto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3V-ai-FGJ">
-                                                                    <rect key="frame" x="0.0" y="27.5" width="161" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="27.5" width="153" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -242,24 +242,24 @@
                                                             </subviews>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPk-hq-YIB">
-                                                            <rect key="frame" x="171" y="0.0" width="1" height="48"/>
+                                                            <rect key="frame" x="163" y="0.0" width="1" height="48"/>
                                                             <color key="backgroundColor" name="gray"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="tXj-Qr-gLo"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pjT-Zl-vLT">
-                                                            <rect key="frame" x="182" y="0.0" width="161" height="48"/>
+                                                            <rect key="frame" x="174" y="0.0" width="153" height="48"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7La-J8-Wti">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="27.5"/>
                                                                     <color key="tintColor" red="1" green="0.1647058824" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <state key="normal" image="pencil" catalog="system">
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                                     </state>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Avaliação" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-cT-Gs2">
-                                                                    <rect key="frame" x="0.0" y="27.5" width="161" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="27.5" width="153" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -357,6 +357,7 @@
                         <outlet property="headerAddressLabel" destination="szd-Mo-Lhq" id="7mf-qK-GYt"/>
                         <outlet property="mapAddressImage" destination="gXK-ec-0Nx" id="0m3-je-GEh"/>
                         <outlet property="nameLabel" destination="bIP-bc-7ga" id="WkU-Hp-cWy"/>
+                        <outlet property="ratingsView" destination="ItQ-4o-iVL" id="6Ob-ok-SXb"/>
                         <outlet property="tableDetailsLabel" destination="KtB-mM-UBW" id="w58-qo-8Z7"/>
                     </connections>
                 </tableViewController>
