@@ -24,6 +24,8 @@ class RestaurantDetailTableViewController: UITableViewController {
     // Célula 04
     @IBOutlet var mapAddressImage: UIImageView!
     
+    @IBOutlet var ratingsView: RatingsView!
+    
     var selectedRestaurant: RestaurantItem?
 
     override func viewDidLoad() {
@@ -39,7 +41,13 @@ class RestaurantDetailTableViewController: UITableViewController {
 private extension RestaurantDetailTableViewController {
     func initialize() {
         setupLabels()
+        setupRating()
         createMapImage()
+    }
+    
+    func setupRating() {
+        ratingsView.rating = 3.5
+        ratingsView.isEnabled = true
     }
     
     func setupLabels() {
