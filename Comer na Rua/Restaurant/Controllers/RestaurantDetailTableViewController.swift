@@ -142,4 +142,6 @@ private extension RestaurantDetailTableViewController {
             }
         }
     }
+    
+    @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
 }

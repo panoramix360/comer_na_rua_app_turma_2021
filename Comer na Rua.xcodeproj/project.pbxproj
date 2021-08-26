@@ -15,6 +15,10 @@
 		034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034F031A26B35C52004069C7 /* LaunchScreen.storyboard */; };
 		034F032826B36BE2004069C7 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F032726B36BE2004069C7 /* ExploreViewController.swift */; };
 		034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F032E26B3813D004069C7 /* RestaurantListViewController.swift */; };
+		0387FDDE26D84AD300AF120F /* ReviewForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0387FDDD26D84AD300AF120F /* ReviewForm.storyboard */; };
+		0387FDE126D84CEE00AF120F /* ReviewFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387FDE026D84CEE00AF120F /* ReviewFormTableViewController.swift */; };
+		0387FDE526D84F3900AF120F /* FilterData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0387FDE426D84F3900AF120F /* FilterData.plist */; };
+		0387FDE726D84F6E00AF120F /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387FDE626D84F6E00AF120F /* FilterItem.swift */; };
 		03B4DDB426CF38AD00FBBD2D /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B4DDB326CF38AD00FBBD2D /* RatingsView.swift */; };
 		03EA658D26C5D0DA0008EA43 /* ExploreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA658C26C5D0DA0008EA43 /* ExploreHeaderView.swift */; };
 		03EA658F26C5ECA40008EA43 /* RestaurantFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EA658E26C5ECA40008EA43 /* RestaurantFilter.swift */; };
@@ -53,6 +57,10 @@
 		034F031D26B35C52004069C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		034F032726B36BE2004069C7 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		034F032E26B3813D004069C7 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		0387FDDD26D84AD300AF120F /* ReviewForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReviewForm.storyboard; sourceTree = "<group>"; };
+		0387FDE026D84CEE00AF120F /* ReviewFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormTableViewController.swift; sourceTree = "<group>"; };
+		0387FDE426D84F3900AF120F /* FilterData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilterData.plist; sourceTree = "<group>"; };
+		0387FDE626D84F6E00AF120F /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		03B4DDB326CF38AD00FBBD2D /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		03EA658C26C5D0DA0008EA43 /* ExploreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeaderView.swift; sourceTree = "<group>"; };
 		03EA658E26C5ECA40008EA43 /* RestaurantFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFilter.swift; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 		034F030E26B35C4E004069C7 /* Comer na Rua */ = {
 			isa = PBXGroup;
 			children = (
+				0387FDE226D84F1900AF120F /* PhotoFilter */,
 				03B4DDB126CF387900FBBD2D /* Review */,
 				03FC636A26B5A5A10061FD44 /* Misc */,
 				03FC636226B59EDD0061FD44 /* Map */,
@@ -201,9 +210,35 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0387FDDF26D84CCD00AF120F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0387FDE026D84CEE00AF120F /* ReviewFormTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0387FDE226D84F1900AF120F /* PhotoFilter */ = {
+			isa = PBXGroup;
+			children = (
+				0387FDE326D84F2400AF120F /* Models */,
+			);
+			path = PhotoFilter;
+			sourceTree = "<group>";
+		};
+		0387FDE326D84F2400AF120F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0387FDE426D84F3900AF120F /* FilterData.plist */,
+				0387FDE626D84F6E00AF120F /* FilterItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		03B4DDB126CF387900FBBD2D /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				0387FDDF26D84CCD00AF120F /* Controllers */,
 				03B4DDB226CF388700FBBD2D /* Views */,
 			);
 			path = Review;
@@ -212,6 +247,7 @@
 		03B4DDB226CF388700FBBD2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0387FDDD26D84AD300AF120F /* ReviewForm.storyboard */,
 				03B4DDB326CF38AD00FBBD2D /* RatingsView.swift */,
 			);
 			path = Views;
@@ -367,7 +403,9 @@
 			files = (
 				03FC634F26B588430061FD44 /* ExploreData.plist in Resources */,
 				03EA659726C5F54E0008EA43 /* NoDataView.xib in Resources */,
+				0387FDE526D84F3900AF120F /* FilterData.plist in Resources */,
 				034F031C26B35C52004069C7 /* LaunchScreen.storyboard in Resources */,
+				0387FDDE26D84AD300AF120F /* ReviewForm.storyboard in Resources */,
 				03FC635F26B59ACA0061FD44 /* LocationsData.plist in Resources */,
 				034F031926B35C52004069C7 /* Assets.xcassets in Resources */,
 				03FC637126B5AFFF0061FD44 /* RestaurantDetail.storyboard in Resources */,
@@ -386,6 +424,7 @@
 				03FC635526B58B8A0061FD44 /* ExploreCollectionViewCell.swift in Sources */,
 				03FA5C0926BCC693003135A5 /* LocationItem.swift in Sources */,
 				03B4DDB426CF38AD00FBBD2D /* RatingsView.swift in Sources */,
+				0387FDE126D84CEE00AF120F /* ReviewFormTableViewController.swift in Sources */,
 				034F032826B36BE2004069C7 /* ExploreViewController.swift in Sources */,
 				034F031426B35C4E004069C7 /* ViewController.swift in Sources */,
 				03EA658F26C5ECA40008EA43 /* RestaurantFilter.swift in Sources */,
@@ -406,6 +445,7 @@
 				03FC636C26B5A5B50061FD44 /* DataManager.swift in Sources */,
 				03FA5C0726BCC051003135A5 /* RestaurantDataManager.swift in Sources */,
 				034F031226B35C4E004069C7 /* SceneDelegate.swift in Sources */,
+				0387FDE726D84F6E00AF120F /* FilterItem.swift in Sources */,
 				03FA5BFF26BC9382003135A5 /* Segue.swift in Sources */,
 				03FC636F26B5A73F0061FD44 /* MapViewController.swift in Sources */,
 			);
