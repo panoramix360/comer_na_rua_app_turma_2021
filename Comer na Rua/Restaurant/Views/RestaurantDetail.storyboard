@@ -232,6 +232,9 @@
                                                                     <state key="normal" image="camera.fill" catalog="system">
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <segue destination="Xbu-D3-WCo" kind="presentation" id="Tlz-rC-i0m"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Foto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3V-ai-FGJ">
                                                                     <rect key="frame" x="0.0" y="27.5" width="153" height="20.5"/>
@@ -374,7 +377,15 @@
                 <viewControllerPlaceholder storyboardName="ReviewForm" id="VUm-NH-kAG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fO-k5-gW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5280" y="-343"/>
+            <point key="canvasLocation" x="5259" y="-398"/>
+        </scene>
+        <!--PhotoFilter-->
+        <scene sceneID="oPr-xY-XQd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotoFilter" id="Xbu-D3-WCo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OF4-s9-qH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5241" y="-85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J4c-XS-eKb">
