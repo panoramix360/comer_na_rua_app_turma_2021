@@ -24,6 +24,8 @@ class RestaurantDetailTableViewController: UITableViewController {
     // Célula 04
     @IBOutlet var mapAddressImage: UIImageView!
     
+    @IBOutlet var overallRatingLabel: UILabel!
+    
     @IBOutlet var ratingsView: RatingsView!
     
     var selectedRestaurant: RestaurantItem?
@@ -31,6 +33,19 @@ class RestaurantDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch Segue(rawValue: identifier) {
+            case .showReview:
+                showReview(segue: segue)
+            case .showPhotoFilter:
+                showPhotoFilter(segue: segue)
+            default:
+                print("Segue não encontrado")
+            }
+        }
     }
     
     @IBAction func onHeartTapped(_ sender: UIBarButtonItem) {
@@ -46,8 +61,20 @@ private extension RestaurantDetailTableViewController {
     }
     
     func setupRating() {
-        ratingsView.rating = 3.5
-        ratingsView.isEnabled = true
+        ratingsView.isEnabled = false
+        
+        if let id = selectedRestaurant?.restaurantID {
+            let value = CoreDataManager.shared.fetchRestaurantRating(by: id)
+            
+            ratingsView.rating = Double(value)
+            
+            if value.isNaN {
+                overallRatingLabel.text = "0.0"
+            } else {
+                let roundedValue = ((value * 10).rounded() / 10)
+                overallRatingLabel.text = "\(roundedValue)"
+            }
+        }
     }
     
     func setupLabels() {
@@ -141,6 +168,22 @@ private extension RestaurantDetailTableViewController {
                 }
             }
         }
+    }
+    
+    func showReview(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController,
+              let viewController = navController.topViewController as? ReviewFormTableViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    func showPhotoFilter(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController,
+              let viewController = navController.topViewController as? PhotoFilterViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
     }
     
     @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
