@@ -91,7 +91,11 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="LqQ-au-GU8"/>
+                            <barButtonItem systemItem="save" id="qhX-1l-f5x">
+                                <connections>
+                                    <action selector="onSaveTapped:" destination="VI2-nK-ly1" id="Tcy-t5-GgZ"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="icon-photo" id="kkC-ZD-maP">
                                 <connections>
                                     <action selector="onPhotoTapped:" destination="VI2-nK-ly1" id="Bq4-VN-RMu"/>
@@ -107,7 +111,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwv-AM-zzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ng2-Av-hgR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4924" y="-152"/>
+            <point key="canvasLocation" x="4924" y="-152.47376311844079"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N6a-k5-6yx">

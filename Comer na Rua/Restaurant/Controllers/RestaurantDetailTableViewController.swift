@@ -33,6 +33,19 @@ class RestaurantDetailTableViewController: UITableViewController {
         initialize()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch Segue(rawValue: identifier) {
+            case .showReview:
+                showReview(segue: segue)
+            case .showPhotoFilter:
+                showPhotoFilter(segue: segue)
+            default:
+                print("Segue não encontrado")
+            }
+        }
+    }
+    
     @IBAction func onHeartTapped(_ sender: UIBarButtonItem) {
     }
 }
@@ -141,6 +154,22 @@ private extension RestaurantDetailTableViewController {
                 }
             }
         }
+    }
+    
+    func showReview(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController,
+              let viewController = navController.topViewController as? ReviewFormTableViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    func showPhotoFilter(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController,
+              let viewController = navController.topViewController as? PhotoFilterViewController else {
+            return
+        }
+        viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
     }
     
     @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}

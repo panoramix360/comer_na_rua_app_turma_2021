@@ -30,6 +30,19 @@ class PhotoFilterViewController: UIViewController {
     @IBAction func onPhotoTapped(_ sender: UIBarButtonItem) {
         checkSource()
     }
+    
+    @IBAction func onSaveTapped(_ sender: UIBarButtonItem) {
+        if let img = self.exampleImage.image {
+            var item = RestaurantPhotoItem()
+            item.photo = generate(image: img, ratio: CGFloat(102))
+            item.date = Date()
+            item.restaurantID = selectedRestaurantID
+            
+            CoreDataManager.shared.addPhoto(item)
+            
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - Private Extension

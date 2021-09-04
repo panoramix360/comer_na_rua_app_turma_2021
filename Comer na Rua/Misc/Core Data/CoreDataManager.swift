@@ -20,7 +20,10 @@ struct CoreDataManager {
         
         container.loadPersistentStores {
             (storeDesc, error) in
-            print("Error ao carregar o Core Data (\(error)")
+            
+            if let error = error {
+                print("Error ao carregar o Core Data (\(error)")
+            }
         }
     }
     
