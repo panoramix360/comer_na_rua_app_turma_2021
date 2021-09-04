@@ -110,6 +110,12 @@ struct CoreDataManager {
         return items
     }
     
+    func fetchRestaurantRating(by identifier: Int) -> Double {
+        let reviews = fetchReview(by: identifier)
+        let sum = reviews.reduce(0, { $0 + ($1.rating ?? 0) })
+        return sum / Double(reviews.count)
+    }
+    
     private func save() {
         container.viewContext.performAndWait {
             do {

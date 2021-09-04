@@ -24,6 +24,8 @@ class RestaurantDetailTableViewController: UITableViewController {
     // Célula 04
     @IBOutlet var mapAddressImage: UIImageView!
     
+    @IBOutlet var overallRatingLabel: UILabel!
+    
     @IBOutlet var ratingsView: RatingsView!
     
     var selectedRestaurant: RestaurantItem?
@@ -59,8 +61,20 @@ private extension RestaurantDetailTableViewController {
     }
     
     func setupRating() {
-        ratingsView.rating = 3.5
-        ratingsView.isEnabled = true
+        ratingsView.isEnabled = false
+        
+        if let id = selectedRestaurant?.restaurantID {
+            let value = CoreDataManager.shared.fetchRestaurantRating(by: id)
+            
+            ratingsView.rating = Double(value)
+            
+            if value.isNaN {
+                overallRatingLabel.text = "0.0"
+            } else {
+                let roundedValue = ((value * 10).rounded() / 10)
+                overallRatingLabel.text = "\(roundedValue)"
+            }
+        }
     }
     
     func setupLabels() {
