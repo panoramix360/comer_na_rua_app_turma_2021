@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0307C7C226E39E59006A6C16 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307C7C126E39E59006A6C16 /* CoreDataManager.swift */; };
+		0307C7C426E3C518006A6C16 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307C7C326E3C518006A6C16 /* ReviewsViewController.swift */; };
+		0307C7C626E3C56B006A6C16 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307C7C526E3C56B006A6C16 /* ReviewCell.swift */; };
 		034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F030F26B35C4E004069C7 /* AppDelegate.swift */; };
 		034F031226B35C4E004069C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F031126B35C4E004069C7 /* SceneDelegate.swift */; };
 		034F031426B35C4E004069C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F031326B35C4E004069C7 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		0307C7C126E39E59006A6C16 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0307C7C326E3C518006A6C16 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		0307C7C526E3C56B006A6C16 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		034F030C26B35C4E004069C7 /* Comer na Rua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comer na Rua.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		034F030F26B35C4E004069C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034F031126B35C4E004069C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				0387FDE026D84CEE00AF120F /* ReviewFormTableViewController.swift */,
+				0307C7C326E3C518006A6C16 /* ReviewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			children = (
 				0387FDF926D876D000AF120F /* ReviewItem.swift */,
 				0387FDFB26D877E100AF120F /* RestaurantPhotoItem.swift */,
+				0307C7C526E3C56B006A6C16 /* ReviewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -500,9 +506,11 @@
 				034F032F26B3813D004069C7 /* RestaurantListViewController.swift in Sources */,
 				03FA5C0126BC96EF003135A5 /* RestaurantDetailTableViewController.swift in Sources */,
 				0387FDEB26D850DF00AF120F /* ImageFiltering.swift in Sources */,
+				0307C7C626E3C56B006A6C16 /* ReviewCell.swift in Sources */,
 				03EA659126C5F3840008EA43 /* RestaurantCell.swift in Sources */,
 				0387FDF726D8747000AF120F /* ComerNaRuaModel.xcdatamodeld in Sources */,
 				03FC635326B589960061FD44 /* ExploreDataManager.swift in Sources */,
+				0307C7C426E3C518006A6C16 /* ReviewsViewController.swift in Sources */,
 				03EA659526C5F5210008EA43 /* NoDataView.swift in Sources */,
 				03FC635B26B598580061FD44 /* LocationViewController.swift in Sources */,
 				034F031026B35C4E004069C7 /* AppDelegate.swift in Sources */,

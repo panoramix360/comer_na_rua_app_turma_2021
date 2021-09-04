@@ -541,10 +541,10 @@
             </objects>
             <point key="canvasLocation" x="4143" y="336"/>
         </scene>
-        <!--View Controller-->
+        <!--Reviews View Controller-->
         <scene sceneID="P4K-7e-lkb">
             <objects>
-                <viewController id="LyJ-GW-QJj" sceneMemberID="viewController">
+                <viewController id="LyJ-GW-QJj" customClass="ReviewsViewController" customModule="Comer_na_Rua" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ut4-OJ-ABS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -559,7 +559,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="uCt-do-KlI">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="uCt-do-KlI" customClass="ReviewCell" customModule="Comer_na_Rua" customModuleProvider="target">
                                         <rect key="frame" x="5" y="0.0" width="333" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O2g-ZX-a8d">
@@ -626,8 +626,19 @@
                                                 <constraint firstItem="pow-GS-OS8" firstAttribute="top" secondItem="O2g-ZX-a8d" secondAttribute="top" constant="5" id="yhp-XS-HQ1"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="WU9-Px-LOx" id="inZ-RL-O7V"/>
+                                            <outlet property="nameLabel" destination="ppP-yr-5K8" id="U65-qd-vQN"/>
+                                            <outlet property="ratingsView" destination="2YJ-Db-8dM" id="xsM-oN-7cd"/>
+                                            <outlet property="reviewLabel" destination="lfu-qU-dBM" id="DSN-4v-nPa"/>
+                                            <outlet property="titleLabel" destination="pow-GS-OS8" id="ky2-0E-nHx"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="LyJ-GW-QJj" id="MSB-xz-0vu"/>
+                                    <outlet property="delegate" destination="LyJ-GW-QJj" id="SvP-4h-ci5"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -638,6 +649,9 @@
                             <constraint firstAttribute="bottomMargin" secondItem="TjT-GM-RSS" secondAttribute="bottom" id="wE3-Sg-Tha"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="TjT-GM-RSS" id="hlJ-UN-vWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpM-BA-5B0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
