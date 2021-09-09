@@ -126,24 +126,33 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zed-rx-e6k">
                                                             <rect key="frame" x="0.0" y="0.0" width="68" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <state key="normal" title="7:30pm" backgroundImage="time-bg">
+                                                            <state key="normal" title="13:30" backgroundImage="time-bg">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="onHourTapped:" destination="SIb-cv-wjZ" eventType="touchUpInside" id="C9P-Lb-mSg"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-kQ-59O">
                                                             <rect key="frame" x="78" y="0.0" width="68" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <state key="normal" title="7:30pm" backgroundImage="time-bg">
+                                                            <state key="normal" title="13:35" backgroundImage="time-bg">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="onHourTapped:" destination="SIb-cv-wjZ" eventType="touchUpInside" id="jpU-F0-5T1"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uv9-sC-sG5">
                                                             <rect key="frame" x="156" y="0.0" width="68" height="27"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <state key="normal" title="7:30pm" backgroundImage="time-bg">
+                                                            <state key="normal" title="13:40" backgroundImage="time-bg">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="onHourTapped:" destination="SIb-cv-wjZ" eventType="touchUpInside" id="xSV-HD-MoZ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
