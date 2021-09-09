@@ -50,6 +50,18 @@ class RestaurantDetailTableViewController: UITableViewController {
     
     @IBAction func onHeartTapped(_ sender: UIBarButtonItem) {
     }
+    
+    @IBAction func onHourTapped(_ sender: UIButton) {
+        if let textButton = sender.titleLabel?.text {
+            checkNotificationPermission {
+                isGranted in
+                
+                if isGranted {
+                    self.showNotification(sender: textButton)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Private Extension
@@ -184,6 +196,53 @@ private extension RestaurantDetailTableViewController {
             return
         }
         viewController.selectedRestaurantID = selectedRestaurant?.restaurantID
+    }
+    
+    func checkNotificationPermission(completion: @escaping (_ isGranted: Bool) -> Void) {
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings {
+            settings in
+            
+            switch settings.authorizationStatus {
+            case .denied:
+                // pedir autorização novamente
+                break
+            case .authorized, .provisional:
+                completion(true)
+            case .notDetermined:
+                center.requestAuthorization(options: [.alert, .sound, .badge]) {
+                    ok, err in
+                    
+                    if let err = err {
+                        print("\(err)")
+                        return
+                    }
+                    
+                    completion(ok)
+                }
+            default:
+                fatalError("Status não identificado")
+            }
+        }
+    }
+    
+    func showNotification(sender: String) {
+        let content = UNMutableNotificationContent()
+        
+        if let name = selectedRestaurant?.name {
+            content.title = name
+        }
+        
+        content.subtitle = "Reserva de Restaurante"
+        content.body = "Mesa para 2, hoje às \(sender)"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let identifier = "comerNaRuaReserva"
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
